@@ -1,8 +1,5 @@
 package animals;
 
-import food.Apples;
-import food.Food;
-
 public class Alpaca extends Herbivore implements Run, Voice {
 
     public Alpaca() {

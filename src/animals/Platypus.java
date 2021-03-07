@@ -1,6 +1,5 @@
 package animals;
 
-
 public class Platypus extends Carnivorous implements Run, Swim, Voice{
 
     public Platypus() {

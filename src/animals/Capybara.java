@@ -1,7 +1,5 @@
 package animals;
 
-import food.Food;
-
 public class Capybara extends Herbivore implements Run, Swim, Voice {
 
     public Capybara() {

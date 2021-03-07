@@ -1,8 +1,5 @@
 package animals;
 
-import food.Food;
-import food.Seaweed;
-
 public class Duck extends Herbivore implements Fly, Run, Voice, Swim {
 
     public Duck() {
