@@ -32,9 +32,9 @@ public class Zoo {
 
         System.out.println();
 
-        for (int i = 0; i < foods.length; i++) {
-            for (int j = 0; j < animals.length; j++) {
-                worker.feed(animals[i], foods[j]);
+        for (Food food : foods) {
+            for (Animal animal : animals) {
+                worker.feed(animal, food);
             }
             System.out.println();
         }
