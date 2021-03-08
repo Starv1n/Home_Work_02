@@ -21,30 +21,33 @@ public class Zoo {
         Food seaweed = new Seaweed();
         Food smallFish = new SmallFish();
 
-        worker.feed(duck,seaweed);
-        worker.feed(duck,mediumRareSteak);
-
-        System.out.println();
-
-        worker.feed(platypus,apples);
-        worker.feed(platypus,insects);
-
-        System.out.println();
+        Animal[] animals = new Animal[]{alpaca, capybara, duck, fish, hedgehog, platypus};
+        Food[] foods = new Food[]{apples, insects, mediumRareSteak, mushrooms, seaweed, smallFish};
 
         fish.getFullness();
         fish.eat(insects);
         fish.getFullness();
-        worker.feed(fish,smallFish);
+        worker.feed(fish, smallFish);
         fish.getFullness();
 
         System.out.println();
 
+        for (int i = 0; i < foods.length; i++) {
+            for (int j = 0; j < animals.length; j++) {
+                worker.feed(animals[i], foods[j]);
+            }
+            System.out.println();
+        }
+
+        worker.doAnimalRun(hedgehog);
+        worker.doAnimalSwim(fish);
+        worker.doAnimalFly(duck);
         worker.getVoice(alpaca);
 
         System.out.println();
 
-        Swim[] pool = new Swim[] {new Fish(), new Platypus(), new Duck(), new Capybara()};
-        for (Swim animal: pool) {
+        Swim[] pool = new Swim[]{new Fish(), new Platypus(), new Duck(), new Capybara()};
+        for (Swim animal : pool) {
             animal.swim();
         }
     }

@@ -12,7 +12,22 @@ public class Alpaca extends Herbivore implements Run, Voice {
     }
 
     @Override
+    public void runningFast() {
+        System.out.println("Alpaca is running around very fast with no sense.");
+    }
+
+    @Override
+    public void runningSlow() {
+        System.out.println("Alpaca is running around very slow with no sense.");
+    }
+
+    @Override
     public String voice() {
-        return "hmmmmmmmm-SCREE-HAW!";
+        return "hmmmmmmmm-scree-haw!";
+    }
+
+    @Override
+    public String voiceLoud() {
+        return voice().toUpperCase();
     }
 }

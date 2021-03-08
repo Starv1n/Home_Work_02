@@ -20,7 +20,7 @@ public abstract class Animal {
     }
 
     public void setFullness(int value) {
-        if (value>=0 && value <=10) {
+        if (value >= 0 && value <= 10) {
             StringBuilder stringBuilder = new StringBuilder(fullness);
             for (int i = 1; i <= value; i++) {
                 stringBuilder.setCharAt(i, '+');
@@ -29,5 +29,5 @@ public abstract class Animal {
         }
     }
 
-    public abstract boolean eat(Food food);
+    public abstract void eat(Food food);
 }
